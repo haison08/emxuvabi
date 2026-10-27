@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xù & Bi — Nhật Ký Tình Yêu Của Chúng Mình 💕</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Nhật ký tình yêu kỹ thuật số của Xù và Bi — lưu giữ những khoảnh khắc ngọt ngào từ ngày 29.12.2025. Mãi mãi bên nhau.">
+  <meta name="author" content="Bi (Hải Sơn)">
+  <meta property="og:title" content="Xù & Bi — Nhật Ký Tình Yêu 💕">
+  <meta property="og:description" content="Kỷ niệm tình yêu ngọt ngào của Xù (Thục Linh) và Bi (Hải Sơn) từ ngày 29.12.2025.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/photos/06-bougainvillea-kiss.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Vintage Paper Grain Overlay -->
+  <div class="paper-overlay" aria-hidden="true"></div>
+
+  <!-- Confetti Canvas Layer -->
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+  <!-- ==========================================================================
+       SECTION 0: Loading Screen
+       ========================================================================== -->
+  <div id="loading-screen" role="progressbar" aria-label="Đang mở trang nhật ký tình yêu">
+    <div class="loader-card">
+      <h1 class="loader-title">Xù & Bi</h1>
+      <p class="loader-subtitle">Đang mở trang nhật ký...</p>
+      <div class="loader-heart">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+      </div>
+      <div class="loader-progress">
+        <div class="loader-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SECTION 1: Hero — "Câu Chuyện Của Chúng Mình"
+       ========================================================================== -->
+  <header id="hero" class="hero-section">
+    <div class="hero-background" id="hero-bg"></div>
+    <div class="petals-container" id="petals-container" aria-hidden="true"></div>
+
+    <div class="hero-content reveal">
+      <div class="hero-tape-top" aria-hidden="true"></div>
+      
+      <div class="hero-badge">
+        <span>✨</span> Nhật Ký Film Scrapbook <span>✨</span>
+      </div>
+
+      <h1 class="hero-title">
+        Xù <span class="ampersand">&</span> Bi
+      </h1>
+
+      <h2 class="hero-subtitle">
+        Câu chuyện tình yêu của chúng mình
+      </h2>
+
+      <div class="hero-date">
+        <span>Từ 29.12.2025</span>
+      </div>
+
+      <p class="hero-desc">
+        Từng ngày trôi qua bên em là một trang nhật ký ngập tràn nụ cười, ấm áp và những điều ngọt ngào nhất. Cuốn nhật ký này là nơi lưu giữ tất cả tình yêu của hai đứa mình.
+      </p>
+
+      <div class="hero-btn-group">
+        <a href="#counter" class="btn-primary" id="btn-explore">
+          <span>Khám phá nhật ký 💕</span>
+        </a>
+        <a href="#gallery" class="btn-outline" id="btn-photos">
+          <span>Xem album ảnh 📸</span>
+        </a>
+      </div>
+    </div>
+
+    <a href="#counter" class="scroll-indicator" aria-label="Cuộn xuống để xem tiếp">
+      <span>Cuộn xuống</span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+      </svg>
+    </a>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         SECTION 2: Love Counter — "Yêu Nhau Đã Được..."
+         ========================================================================== -->
+    <section id="counter" class="counter-section">
+      <div class="counter-container">
+        
+        <div class="section-header reveal">
+          <span class="section-tag">Thời Gian Bên Nhau</span>
+          <h2 class="section-title">Yêu Nhau Đã Được...</h2>
+          <p class="section-subtitle">
+            Mỗi giây phút được ở bên em đều là một món quà vô giá mà cuộc sống ban tặng.
+          </p>
+          <div class="divider">
+            <span></span>
+            <div class="heart-icon">♥</div>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="counter-grid">
+          <div class="counter-card reveal delay-1" id="card-years">
+            <div class="counter-num" id="count-years">0</div>
+            <div class="counter-label">Năm</div>
+          </div>
+          <div class="counter-card reveal delay-2" id="card-months">
+            <div class="counter-num" id="count-months">0</div>
+            <div class="counter-label">Tháng</div>
+          </div>
+          <div class="counter-card reveal delay-3" id="card-days">
+            <div class="counter-num" id="count-days">0</div>
+            <div class="counter-label">Ngày</div>
+          </div>
+          <div class="counter-card reveal delay-4" id="card-hours">
+            <div class="counter-num" id="count-hours">00</div>
+            <div class="counter-label">Giờ</div>
+          </div>
+          <div class="counter-card reveal delay-5" id="card-minutes">
+            <div class="counter-num" id="count-minutes">00</div>
+            <div class="counter-label">Phút</div>
+          </div>
+          <div class="counter-card pulse-card reveal delay-5" id="card-seconds">
+            <div class="counter-num" id="count-seconds">00</div>
+            <div class="counter-label">Giây</div>
+          </div>
+        </div>
+
+        <div class="counter-footer-text reveal">
+          <span>...và sẽ còn mãi mãi bên nhau</span>
+          <span class="sparkle">💕✨</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3: Timeline — "Hành Trình Của Chúng Mình"
+         ========================================================================== -->
+    <section id="timeline" class="timeline-section">
+      <div class="timeline-container">
+        
+        <div class="section-header reveal">
+          <span class="section-tag">Dấu Mốc Tình Yêu</span>
+          <h2 class="section-title">Hành Trình Của Chúng Mình</h2>
+          <p class="section-subtitle">
+            Từng trạm dừng chân trên con đường hai đứa cùng bước qua, đầy ắp tiếng cười và tình cảm chân thành.
+          </p>
+          <div class="divider">
+            <span></span>
+            <div class="heart-icon">♥</div>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="timeline-line" id="timeline-line"></div>
+
+        <!-- Milestone 1 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <span class="timeline-date-badge">📅 29/12/2025</span>
+            <h3 class="timeline-title">Ngày Chúng Mình Bắt Đầu</h3>
+            <p class="timeline-desc">
+              Ngày mà anh (Bi) chính thức ngỏ lời và có được em (Xù) trong cuộc đời. Ngày đẹp nhất và ý nghĩa nhất mở ra cả một trang mới ngập tràn hạnh phúc 💕
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 2 -->
+        <div class="timeline-item reveal delay-1">
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <span class="timeline-date-badge">🎓 Ngày Tốt Nghiệp</span>
+            <h3 class="timeline-title">Cùng Nhau Bước Qua Chương Mới</h3>
+            <p class="timeline-desc">
+              Cùng nhau bước qua cột mốc quan trọng của cuộc đời. Có em ở bên cầm bó hoa tươi thắm, nụ cười của em làm bừng sáng cả ngày lễ trọng đại này.
+            </p>
+            <div class="timeline-polaroid" onclick="openLightbox('assets/images/photos/02-graduation-bouquet.jpg', 'Ngày anh tốt nghiệp cầm hoa cùng em 🎓')">
+              <img src="assets/images/photos/02-graduation-bouquet.jpg" alt="Ngày tốt nghiệp cùng nhau" loading="lazy">
+              <div class="timeline-polaroid-caption">Ngày anh tốt nghiệp 🎓</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Milestone 3 -->
+        <div class="timeline-item reveal delay-2">
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <span class="timeline-date-badge">💋 Khoảnh Khắc Ngọt Ngào</span>
+            <h3 class="timeline-title">Nụ Hôn Chúc Mừng</h3>
+            <p class="timeline-desc">
+              Giữa hàng ngàn ánh mắt và những lời chúc phúc, cái hôn má dịu dàng của hai đứa là minh chứng ngọt ngào nhất cho tình yêu này.
+            </p>
+            <div class="timeline-polaroid" onclick="openLightbox('assets/images/photos/03-graduation-kiss.jpg', 'Khoảnh khắc ngọt ngào nhất 💋')">
+              <img src="assets/images/photos/03-graduation-kiss.jpg" alt="Khoảnh khắc ngọt ngào" loading="lazy">
+              <div class="timeline-polaroid-caption">Khoảnh khắc ngọt ngào nhất 💋</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Milestone 4 -->
+        <div class="timeline-item reveal delay-3">
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <span class="timeline-date-badge">🌸 Dưới Tán Hoa Giấy</span>
+            <h3 class="timeline-title">Nụ Hôn Lãng Mạn</h3>
+            <p class="timeline-desc">
+              Có nụ hôn nào nên thơ hơn nụ hôn dưới tán hoa giấy hồng rực rỡ? Khoảnh khắc bình yên và đẹp đẽ như một thước phim tình ca bất tận.
+            </p>
+            <div class="timeline-polaroid" onclick="openLightbox('assets/images/photos/06-bougainvillea-kiss.jpg', 'Dưới tán hoa giấy hồng 🌸')">
+              <img src="assets/images/photos/06-bougainvillea-kiss.jpg" alt="Hôn bên hoa giấy" loading="lazy">
+              <div class="timeline-polaroid-caption">Dưới tán hoa giấy 🌸</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Milestone 5 -->
+        <div class="timeline-item reveal delay-4">
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <span class="timeline-date-badge">🏫 Nắm Tay Ở Hành Lang</span>
+            <h3 class="timeline-title">Chỉ Cần Nắm Chặt Tay Nhau</h3>
+            <p class="timeline-desc">
+              Chỉ cần nắm chặt đôi bàn tay nhỏ nhắn của em nơi hành lang trường, mọi lo toan bộn bề đều tan biến, chỉ còn lại sự ấm áp vẹn nguyên.
+            </p>
+            <div class="timeline-polaroid" onclick="openLightbox('assets/images/photos/04-holding-hands.jpg', 'Nắm tay anh đi khắp thế gian 🤝')">
+              <img src="assets/images/photos/04-holding-hands.jpg" alt="Nắm tay ở hành lang" loading="lazy">
+              <div class="timeline-polaroid-caption">Nắm tay anh đi 🤝</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4: Gallery — "Bộ Sưu Tập Kỷ Niệm"
+         ========================================================================== -->
+    <section id="gallery" class="gallery-section">
+      <div class="gallery-container">
+        
+        <div class="section-header reveal">
+          <span class="section-tag">Album Kỷ Niệm Film</span>
+          <h2 class="section-title">Bộ Sưu Tập Kỷ Niệm 📸</h2>
+          <p class="section-subtitle">
+            Những khoảnh khắc chân thực, đáng yêu và đầy cảm xúc được dán gọn gàng trên trang sổ kỷ niệm.
+          </p>
+          <div class="divider">
+            <span></span>
+            <div class="heart-icon">♥</div>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="gallery-grid">
+          
+          <!-- Photo 1: Selfie gỗ -->
+          <div class="polaroid-frame item-1 reveal delay-1" onclick="openLightbox('assets/images/photos/01-selfie-cute.jpg', 'mặt xấu nhưng dễ thương 😝')">
+            <div class="washi-tape washi-pink"></div>
+            <div class="polaroid-img-wrapper">
+              <img src="assets/images/photos/01-selfie-cute.jpg" alt="Selfie hai đứa trước tường gỗ" loading="lazy">
+            </div>
+            <div class="polaroid-caption">mặt xấu nhưng dễ thương 😝</div>
+          </div>
+
+          <!-- Photo 2: Tốt nghiệp hoa -->
+          <div class="polaroid-frame item-2 reveal delay-2" onclick="openLightbox('assets/images/photos/02-graduation-bouquet.jpg', 'ngày anh tốt nghiệp 🎓')">
+            <div class="washi-tape washi-gold"></div>
+            <div class="polaroid-img-wrapper">
+              <img src="assets/images/photos/02-graduation-bouquet.jpg" alt="Tốt nghiệp cầm hoa" loading="lazy">
+            </div>
+            <div class="polaroid-caption">ngày anh tốt nghiệp 🎓</div>
+          </div>
+
+          <!-- Photo 3: Hôn tốt nghiệp -->
+          <div class="polaroid-frame item-3 reveal delay-3" onclick="openLightbox('assets/images/photos/03-graduation-kiss.jpg', 'khoảnh khắc ngọt ngào nhất 💋')">
+            <div class="washi-tape washi-mint"></div>
+            <div class="polaroid-img-wrapper">
+              <img src="assets/images/photos/03-graduation-kiss.jpg" alt="Hôn nhau lễ tốt nghiệp" loading="lazy">
+            </div>
+            <div class="polaroid-caption">khoảnh khắc ngọt ngào nhất 💋</div>
+          </div>
+
+          <!-- Photo 4: Nắm tay -->
+          <div class="polaroid-frame item-4 reveal delay-1" onclick="openLightbox('assets/images/photos/04-holding-hands.jpg', 'nắm tay anh đi 🤝')">
+            <div class="washi-tape washi-pink"></div>
+            <div class="polaroid-img-wrapper">
+              <img src="assets/images/photos/04-holding-hands.jpg" alt="Nắm tay hành lang trường" loading="lazy">
+            </div>
+            <div class="polaroid-caption">nắm tay anh đi 🤝</div>
+          </div>
+
+          <!-- Photo 5: Lễ hội đêm -->
+          <div class="polaroid-frame item-5 reveal delay-2" onclick="openLightbox('assets/images/photos/05-festival-night.jpg', 'đêm hội cùng nhau ✨')">
+            <div class="washi-tape washi-gold"></div>
+            <div class="polaroid-img-wrapper">
+              <img src="assets/images/photos/05-festival-night.jpg" alt="Lễ hội đêm lung linh" loading="lazy">
+            </div>
+            <div class="polaroid-caption">đêm hội cùng nhau ✨</div>
+          </div>
+
+          <!-- Photo 6: Hôn hoa giấy -->
+          <div class="polaroid-frame item-6 reveal delay-3" onclick="openLightbox('assets/images/photos/06-bougainvillea-kiss.jpg', 'dưới tán hoa giấy 🌸')">
+            <div class="washi-tape washi-mint"></div>
+            <div class="polaroid-img-wrapper">
+              <img src="assets/images/photos/06-bougainvillea-kiss.jpg" alt="Hôn bên hoa giấy hồng" loading="lazy">
+            </div>
+            <div class="polaroid-caption">dưới tán hoa giấy 🌸</div>
+          </div>
+
+          <!-- Photo 7: Video call -->
+          <div class="polaroid-frame item-7 reveal delay-1" onclick="openLightbox('assets/images/photos/07-video-call.jpg', 'xa nhau nhưng vẫn gần 📱')">
+            <div class="washi-tape washi-pink"></div>
+            <div class="polaroid-img-wrapper">
+              <img src="assets/images/photos/07-video-call.jpg" alt="Gọi video dễ thương" loading="lazy">
+            </div>
+            <div class="polaroid-caption">xa nhau nhưng vẫn gần 📱</div>
+          </div>
+
+          <!-- Photo 8: Lock screen -->
+          <div class="polaroid-frame item-8 reveal delay-2" onclick="openLightbox('assets/images/photos/08-lockscreen.jpg', 'luôn ở trên màn hình anh 🔒')">
+            <div class="washi-tape washi-gold"></div>
+            <div class="polaroid-img-wrapper">
+              <img src="assets/images/photos/08-lockscreen.jpg" alt="Màn hình khóa điện thoại" loading="lazy">
+            </div>
+            <div class="polaroid-caption">luôn ở trên màn hình anh 🔒</div>
+          </div>
+
+          <!-- Photo 9: Filter vui -->
+          <div class="polaroid-frame item-9 reveal delay-3" onclick="openLightbox('assets/images/photos/09-funny-filter.jpg', 'couple quậy nhất 🤪')">
+            <div class="washi-tape washi-pink"></div>
+            <div class="polaroid-img-wrapper">
+              <img src="assets/images/photos/09-funny-filter.jpg" alt="Filter vui nhộn" loading="lazy">
+            </div>
+            <div class="polaroid-caption">couple quậy nhất 🤪</div>
+          </div>
+
+          <!-- Photo 10: Nhà hàng -->
+          <div class="polaroid-frame item-10 reveal delay-4" onclick="openLightbox('assets/images/photos/10-restaurant.jpg', 'đi ăn là vui nhất 🍜')">
+            <div class="washi-tape washi-mint"></div>
+            <div class="polaroid-img-wrapper">
+              <img src="assets/images/photos/10-restaurant.jpg" alt="Đi ăn cùng nhau" loading="lazy">
+            </div>
+            <div class="polaroid-caption">đi ăn là vui nhất 🍜</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5: Love Letter — "Lời Muốn Nói"
+         ========================================================================== -->
+    <section id="letter" class="letter-section">
+      <div class="letter-wrapper">
+        
+        <div class="section-header reveal">
+          <span class="section-tag">Bức Thư Tình</span>
+          <h2 class="section-title">Lời Muốn Nói</h2>
+          <p class="section-subtitle">
+            Những dòng thư chân thành viết từ trái tim của Bi gửi tặng Xù yêu dấu.
+          </p>
+          <div class="divider">
+            <span></span>
+            <div class="heart-icon">♥</div>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="letter-paper reveal">
+          <h3 class="letter-salutation">Gửi Xù yêu dấu của anh,</h3>
+          
+          <div class="letter-body">
+            <p>
+              Em biết không, từ ngày 29 tháng 12 năm 2025 định mệnh ấy, thế giới của anh bỗng trở nên rực rỡ và ngập tràn ấm áp hơn bao giờ hết. Cảm ơn em vì đã bước vào cuộc sống của anh, mang theo nụ cười trong trẻo xua tan đi tất cả những bộn bề âu lo.
+            </p>
+            <p style="margin-top: 18px;">
+              Anh yêu từng cái nắm tay, từng ánh mắt dịu dàng và cả những khoảnh khắc hai đứa cùng làm trò nghịch ngợm bên nhau. Dù mai này chặng đường phía trước có ra sao, anh vẫn luôn mong muốn được nắm chặt tay em, cùng em ngắm hoa, cùng em đi ăn những món ngon và viết tiếp những trang nhật ký ngập tràn hạnh phúc.
+            </p>
+            <p style="margin-top: 18px;">
+              Cảm ơn em đã là mảnh ghép hoàn hảo nhất trong thanh xuân của anh. Mãi yêu Xù!
+            </p>
+          </div>
+
+          <div class="letter-signature">
+            <p class="letter-valediction">Yêu em nhiều lắm 💕</p>
+            <p class="letter-signer">Bi của em</p>
+          </div>
+
+          <div class="letter-seal" aria-hidden="true">
+            <div class="wax-stamp">XB</div>
+            <div class="kiss-mark">💋</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 6: "Điều Anh Yêu Ở Em" (Sticky Notes on Wood Board)
+         ========================================================================== -->
+    <section id="reasons" class="sticky-section">
+      <div class="section-header reveal">
+        <span class="section-tag">Lý Do Anh Say Đắm</span>
+        <h2 class="section-title">Những Điều Anh Yêu Ở Em 💝</h2>
+        <p class="section-subtitle">
+          Mỗi ngày ở bên em, anh lại khám phá thêm biết bao điều đáng yêu khiến anh chẳng thể ngừng thương.
+        </p>
+        <div class="divider">
+          <span></span>
+          <div class="heart-icon" style="color: #FF9EB5;">♥</div>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="sticky-board">
+        
+        <!-- Note 1 -->
+        <div class="sticky-note note-pink reveal delay-1">
+          <div class="sticky-pin"></div>
+          <div class="sticky-number">#01</div>
+          <p class="sticky-content">Yêu nụ cười tỏa nắng của em mỗi lần nhìn thấy anh bước tới đón.</p>
+          <div class="sticky-icon">😊</div>
+        </div>
+
+        <!-- Note 2 -->
+        <div class="sticky-note note-yellow reveal delay-2">
+          <div class="sticky-tape"></div>
+          <div class="sticky-number">#02</div>
+          <p class="sticky-content">Yêu cái cách em chu mỏ, phụng phịu giả vờ dỗi hờn siêu đáng yêu.</p>
+          <div class="sticky-icon">😤</div>
+        </div>
+
+        <!-- Note 3 -->
+        <div class="sticky-note note-mint reveal delay-3">
+          <div class="sticky-pin"></div>
+          <div class="sticky-number">#03</div>
+          <p class="sticky-content">Yêu lúc em đeo kính tròn ngố tàu, trông em vừa dễ thương vừa ngây thơ.</p>
+          <div class="sticky-icon">🤓</div>
+        </div>
+
+        <!-- Note 4 -->
+        <div class="sticky-note note-lavender reveal delay-1">
+          <div class="sticky-tape"></div>
+          <div class="sticky-number">#04</div>
+          <p class="sticky-content">Yêu mỗi cuộc gọi video call xuyên đêm dù hai đứa có đang ở xa nhau.</p>
+          <div class="sticky-icon">📱</div>
+        </div>
+
+        <!-- Note 5 -->
+        <div class="sticky-note note-peach reveal delay-2">
+          <div class="sticky-pin"></div>
+          <div class="sticky-number">#05</div>
+          <p class="sticky-content">Yêu em trong tà áo dài trắng tinh khôi và bộ lễ phục ngày tốt nghiệp.</p>
+          <div class="sticky-icon">🤍</div>
+        </div>
+
+        <!-- Note 6 -->
+        <div class="sticky-note note-sky reveal delay-3">
+          <div class="sticky-tape"></div>
+          <div class="sticky-number">#06</div>
+          <p class="sticky-content">Yêu những bữa ăn ngon lành, hai đứa cùng nhai nhồm nhoàm cười nói vui vẻ.</p>
+          <div class="sticky-icon">🍜</div>
+        </div>
+
+        <!-- Note 7 -->
+        <div class="sticky-note note-pink reveal delay-4">
+          <div class="sticky-pin"></div>
+          <div class="sticky-number">#07</div>
+          <p class="sticky-content">Yêu cái cách em luôn đặt trọn niềm tin và dịu dàng động viên anh mỗi ngày.</p>
+          <div class="sticky-icon">💕</div>
+        </div>
+
+        <!-- Note 8 -->
+        <div class="sticky-note note-yellow reveal delay-5">
+          <div class="sticky-tape"></div>
+          <div class="sticky-number">#08</div>
+          <p class="sticky-content">Tóm lại là anh yêu tất cả mọi điều thuộc về Xù của anh!</p>
+          <div class="sticky-icon">🌸</div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       SECTION 7: Floating Music Player Component
+       ========================================================================== -->
+  <aside class="music-player-widget" id="music-widget" aria-label="Bộ phát nhạc nền">
+    
+    <!-- Collapsible Drawer -->
+    <div class="music-drawer" id="music-drawer">
+      <div class="music-info">
+        <span class="song-title" id="music-title">Giai Điệu Tình Yêu</span>
+        <span class="song-artist" id="music-artist">Xù & Bi Soundtrack 💕</span>
+      </div>
+      <div class="progress-track" id="music-track" title="Tua nhạc">
+        <div class="progress-fill" id="music-progress"></div>
+      </div>
+    </div>
+
+    <!-- Toggle Button with Spinning Vinyl Disc -->
+    <button class="music-toggle-btn" id="music-btn" aria-label="Bật/Tắt nhạc nền" title="Bật/Tắt nhạc">
+      <div class="vinyl-disc">
+        <div class="vinyl-center">♪</div>
+      </div>
+    </button>
+
+    <!-- Hidden Native Audio Element (NO Autoplay) -->
+    <audio id="bg-audio" preload="metadata" loop>
+      <source src="assets/music/our-song.mp3" type="audio/mpeg">
+      Trình duyệt của bạn không hỗ trợ phát nhạc.
+    </audio>
+  </aside>
+
+  <!-- ==========================================================================
+       SECTION 8: Footer — "Mãi Mãi Bên Nhau"
+       ========================================================================== -->
+  <footer id="footer" class="footer-section">
+    <div class="footer-content reveal">
+      
+      <div class="footer-heart-pulse" id="footer-heart" title="Bấm vào để tung tim 💕" role="button" tabindex="0" aria-label="Trái tim đập yêu thương">
+        💖
+      </div>
+
+      <h2 class="footer-title">Xù & Bi — Mãi Mãi Bên Nhau</h2>
+      
+      <p class="footer-milestone">29.12.2025 → ♾️</p>
+
+      <p class="footer-quote">
+        "Tình yêu không phải là tìm một người hoàn hảo, mà là cùng nhau biến những khoảnh khắc bình dị trở nên trọn vẹn và diệu kỳ nhất."
+      </p>
+
+      <div>
+        <button class="footer-confetti-btn" id="btn-confetti">
+          Bắn tim chúc mừng 💕
+        </button>
+      </div>
+
+      <div class="footer-credit" style="margin-top: 30px;">
+        Made with 💕 by <strong>Bi (Hải Sơn)</strong> for <strong>Xù (Thục Linh)</strong>
+        <br>
+        <span style="font-size: 0.8rem; opacity: 0.75;">emxuvabi.vercel.app • Mãi mãi một tình yêu</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Lightbox Modal
+       ========================================================================== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Xem ảnh lớn">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Đóng ảnh">&times;</button>
+      <img src="" alt="Ảnh kỷ niệm lớn" class="lightbox-img" id="lightbox-img">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
